@@ -1,0 +1,21 @@
+{
+	"font_sizes":{
+		"smallest":1.5,
+		"small":2,
+		"normal":2.5,
+		"large":3,
+		"huge":3.5,
+		"hugest":4
+	},
+	"color_style":"Grey",
+	"font_name":"normal",
+	"uihome":"http://stock.bsppo.com:10080",
+	"i18n_url":"/public/i18n",
+	"root":{
+		"widgettype":"urlwidget",
+		"options":{
+			"url":"http://stock.bsppo.com:10080/index.ui"
+		}
+	}
+}
+

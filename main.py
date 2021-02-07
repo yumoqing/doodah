@@ -51,6 +51,7 @@ from appPublic.find_player import BroadcastServer, find_players
 from appPublic.background import Background
 from kivyblocks.player_osc import PlayerOSCServer
 from kivyblocks.threadcall import Workers
+from loadplugins import load_plugins
 
 r = Factory.register
 
@@ -66,6 +67,11 @@ def changeDesktopFontSize():
 	d = {k:v+3.0 for k,v in config.font_sizes.items()}
 	config.font_sizes = d
 	
+class DoodahApp(BlocksApp):
+	def build(self):
+		x = super().build()
+		load_plugins(ProgramPath())
+		return x
 	
 if __name__ == '__main__':
 	pp = workdir = ProgramPath()

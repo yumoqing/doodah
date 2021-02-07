@@ -82,10 +82,10 @@ requirements.source.sqlite3 = /home/ymq/p4a/packages/sqlite3
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/imgs/ktv.png
+presplash.filename = %(source.dir)s/doodah.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/imgs/ktv.png
+icon.filename = %(source.dir)s/doodah.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = all

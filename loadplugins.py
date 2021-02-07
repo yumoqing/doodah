@@ -23,7 +23,7 @@ def register_registerfunction(name, func):
 def register_blocks(name, value):
 	b = Factory.Blocks()
 	try:
-		b.register(name, value)
+		b.register_widget(name, value)
 	except:
 		Logger.Error(f'plugin : register_blocks():{name} register error')
 

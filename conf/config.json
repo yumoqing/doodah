@@ -14,7 +14,8 @@
 	"root":{
 		"widgettype":"urlwidget",
 		"options":{
-			"url":"http://stock.bsppo.com:10080/index.ui"
+			"url":"http://stock.bsppo.com:10080/index.ui",
+			"url":"http://stock.bsppo.com:10080/test/index.ui"
 		}
 	}
 }

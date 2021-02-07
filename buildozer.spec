@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = iptvclient
+title = Doodah
 
 # (str) Package name
-package.name = iptvclient
+package.name = doodah
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = com.bsppo
@@ -17,7 +17,8 @@ source.include_exts = json, py,png,jpg,kv,atlas,ttf
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
-source.include_patterns = imgs/*.png, conf/*.json,kivyblocks/imgs/*.png,kivyblocks/ttf/*.ttf
+source.include_patterns = imgs/*.png, conf/*.json,kivyblocks/imgs/*.png,kivyblocks/ttf/*.ttf \
+	kivyblocks/image_processing/cascades/*.xml
 
 # (list) Source files to exclude (let empty to not exclude anything)
 source.exclude_exts = spec
@@ -29,40 +30,41 @@ source.exclude_dirs = tests, bin, dist, build, __pycache__
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.4
+# version = 0.1
 
 # (str) Application versioning (method 2)
-# version.regex = __version__ = ['"](.*)['"]
-# version.filename = %(source.dir)s/main.py
+version.regex = __version__ = ['"](.*)['"]
+version.filename = %(source.dir)s/version.py
+
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = multidict, async-timeout, attrs, typing-extensions, yarl, aiohttp, asyncio, plyer, numpy,  \
+requirements = multidict, async-timeout, attrs, typing-extensions, yarl, aiohttp, asyncio, plyer, numpy, \
 	openssl, ffpyplayer, ffpyplayer_codecs, libx264, cryptography,  pillow, qrcode, ffmpeg, pygments, \
 	markupsafe,jinja2,urllib3, chardet, idna, requests,python3,kivy,python-osc, \
+	opencv, bs4, beautifulsoup4, soupsieve, lxml, pyaudio \
 	git+https://github.com/yumoqing/appPublic, \
 	git+https://github.com/yumoqing/kivycalendar, \
-	git+https://github.com/yumoqing/kivy-blocks, \
-	oscpy
+	git+https://github.com/yumoqing/kivy-blocks 
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.appPublic = /home/ymq/pydev/github/appPublic
 # requirements.source.kivycalendar = /home/ymq/pydev/github/kivycalendar
 # requirements.source.kivyblocks = /home/ymq/pydev/github/kivy-blocks
-requirements.source.kivy = /home/ymq/p4a/packages/kivy
 requirements.source.ffmpeg = /home/ymq/p4a/packages/ffmpeg
+requirements.source.kivy = /home/ymq/p4a/packages/kivy
+requirements.source.pillow = /home/ymq/p4a/packages/Pillow
 requirements.source.cffi = /home/ymq/p4a/packages/cffi
 requirements.source.cryptography = /home/ymq/p4a/packages/cryptography
 requirements.source.cython = /home/ymq/p4a/packages/cython
 requirements.source.ffpyplayer = /home/ymq/p4a/packages/ffpyplayer
 requirements.source.freetype = /home/ymq/p4a/packages/freetype
-requirements.source.hostpython3 = /home/ymq/p4a/packages/hostpython3
 requirements.source.jpeg = /home/ymq/p4a/packages/jpeg
+requirements.source.hostpython3 = /home/ymq/p4a/packages/Python-3.8.1
 requirements.source.libffi = /home/ymq/p4a/packages/libffi
 requirements.source.libx264 = /home/ymq/p4a/packages/libx264
 requirements.source.numpy = /home/ymq/p4a/packages/numpy
 requirements.source.openssl = /home/ymq/p4a/packages/openssl
-requirements.source.pillow = /home/ymq/p4a/packages/Pillow
 requirements.source.png = /home/ymq/p4a/packages/png
 requirements.source.pycparser = /home/ymq/p4a/packages/pycparser
 requirements.source.pyjnius = /home/ymq/p4a/packages/pyjnius
@@ -80,10 +82,10 @@ requirements.source.sqlite3 = /home/ymq/p4a/packages/sqlite3
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/nettv.png
+presplash.filename = %(source.dir)s/imgs/ktv.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/nettv.png
+icon.filename = %(source.dir)s/imgs/ktv.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = all
@@ -99,17 +101,17 @@ orientation = all
 # author = © Copyright Info
 
 # change the major version of python used by the app
-osx.python_version = 3
+# osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = 1.9.1
+# osx.kivy_version = 1.9.1
 
 #
 # Android specific
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 0
+fullscreen = True
 
 # (string) Presplash background color (for new android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
@@ -126,7 +128,7 @@ android.permissions = INTERNET, CAMERA, VIBRATE, CALL_PHONE, CALL_PRIVILEGED
 # android.api = 23
 
 # (int) Minimum API your APK will support.
-android.minapi = 21
+# android.minapi = 21
 
 # (int) Android SDK version to use
 #android.sdk = 20
@@ -135,7 +137,7 @@ android.minapi = 21
 #android.ndk = 19b
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
-android.ndk_api = 21
+# android.ndk_api = 21
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True

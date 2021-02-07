@@ -74,6 +74,6 @@ if __name__ == '__main__':
 	changeDesktopFontSize()
 	myapp = BlocksApp()
 	ge = GlobalEnv()
-	Window.maximize()
+	# Window.maximize()
 	myapp.run()
 

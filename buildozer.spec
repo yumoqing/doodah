@@ -18,7 +18,8 @@ source.include_exts = json, py,png,jpg,kv,atlas,ttf
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
 source.include_patterns = imgs/*.png, conf/*.json,kivyblocks/imgs/*.png,kivyblocks/ttf/*.ttf \
-	kivyblocks/image_processing/cascades/*.xml
+	kivyblocks/image_processing/cascades/*.xml \
+	plugins/*.py plugins/pub/*.py
 
 # (list) Source files to exclude (let empty to not exclude anything)
 source.exclude_exts = spec
@@ -41,7 +42,7 @@ version.filename = %(source.dir)s/version.py
 requirements = multidict, async-timeout, attrs, typing-extensions, yarl, aiohttp, asyncio, plyer, numpy, \
 	openssl, ffpyplayer, ffpyplayer_codecs, libx264, cryptography,  pillow, qrcode, ffmpeg, pygments, \
 	markupsafe,jinja2,urllib3, chardet, idna, requests,python3,kivy,python-osc, \
-	opencv, bs4, beautifulsoup4, soupsieve, lxml, pyaudio \
+	regex, opencv, bs4, beautifulsoup4, soupsieve, lxml, pyaudio \
 	git+https://github.com/yumoqing/appPublic, \
 	git+https://github.com/yumoqing/kivycalendar, \
 	git+https://github.com/yumoqing/kivy-blocks 

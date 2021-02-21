@@ -69,8 +69,8 @@ def changeDesktopFontSize():
 	
 class DoodahApp(BlocksApp):
 	def build(self):
-		x = super().build()
 		load_plugins(ProgramPath())
+		x = super().build()
 		return x
 	
 if __name__ == '__main__':
@@ -78,7 +78,7 @@ if __name__ == '__main__':
 	print('ProgramPath=',pp,'workdir=',workdir)
 	config = getConfig(workdir,NS={'workdir':workdir,'ProgramPath':pp})
 	changeDesktopFontSize()
-	myapp = BlocksApp()
+	myapp = DoodahApp()
 	ge = GlobalEnv()
 	# Window.maximize()
 	myapp.run()

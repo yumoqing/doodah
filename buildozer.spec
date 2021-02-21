@@ -41,7 +41,7 @@ version.filename = %(source.dir)s/version.py
 requirements = multidict, async-timeout, attrs, typing-extensions, yarl, aiohttp, asyncio, plyer, numpy, \
 	openssl, ffpyplayer, ffpyplayer_codecs, libx264, cryptography,  pillow, qrcode, ffmpeg, pygments, \
 	markupsafe,jinja2,urllib3, chardet, idna, requests,python3,kivy,python-osc, \
-	opencv, bs4, beautifulsoup4, soupsieve, lxml, pyaudio \
+	opencv, bs4, beautifulsoup4, soupsieve, lxml, portaudio, pyaudio, ujson, \
 	git+https://github.com/yumoqing/appPublic, \
 	git+https://github.com/yumoqing/kivycalendar, \
 	git+https://github.com/yumoqing/kivy-blocks 

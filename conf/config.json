@@ -7,6 +7,9 @@
 		"huge":3.5,
 		"hugest":4
 	},
+	"css":{
+		"css_url":"/csses.json"
+	},
 	"color_style":"Grey",
 	"font_name":"normal",
 	"uihome":"http://stock.bsppo.com:10080",

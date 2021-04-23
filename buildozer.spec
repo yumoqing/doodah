@@ -17,9 +17,14 @@ source.include_exts = json, py,png,jpg,kv,atlas,ttf
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
-source.include_patterns = imgs/*.png, conf/*.json,kivyblocks/imgs/*.png,kivyblocks/ttf/*.ttf, \
+source.include_patterns = imgs/*.png, conf/*.json, \
+	kivyblocks/imgs/*.png, \
+	kivyblocks/ttf/*.ttf, \
 	kivyblocks/image_processing/cascades/*.xml, \
-	plugins/*.py plugins/pub/*.py
+	kivyblocks/xcamera/data/*, \
+	kivyblocks/xcamera/xcamera.kv, \
+	plugins/*, \
+	plugins/pub/*.py 
 
 # (list) Source files to exclude (let empty to not exclude anything)
 source.exclude_exts = spec

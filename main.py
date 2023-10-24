@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 import os
+import asyncio
+import argparse
 # os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 from functools import partial
 import codecs
@@ -74,12 +76,11 @@ class DoodahApp(BlocksApp):
 		return x
 	
 if __name__ == '__main__':
-	pp = workdir = ProgramPath()
-	print('ProgramPath=',pp,'workdir=',workdir)
+	workdir = os.getcwd()
+	pp = ProgramPath()
 	config = getConfig(workdir,NS={'workdir':workdir,'ProgramPath':pp})
-	changeDesktopFontSize()
 	myapp = DoodahApp()
 	ge = GlobalEnv()
-	# Window.maximize()
-	myapp.run()
+	loop = asyncio.get_event_loop()
+	loop.run_until_complete(myapp.async_run())
 
